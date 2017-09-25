@@ -8,18 +8,21 @@ import './index.css'
 const Header = () => (
   <div
     style={{
-      background: 'rebeccapurple',
+      background: '#2452c2',
       marginBottom: '1.45rem',
     }}
   >
     <div
       style={{
+        display: '-ms-flexbox',
+        display: 'flex',
+        flexDirection: 'row',
         margin: '0 auto',
-        maxWidth: 960,
+        maxWidth: 1200,
         padding: '1.45rem 1.0875rem',
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <h1 style={{ paddingTop: '10px', flex: 1, margin: 0 }}>
         <Link
           to="/"
           style={{
@@ -27,9 +30,40 @@ const Header = () => (
             textDecoration: 'none',
           }}
         >
-          Gatsby
+          Finn
         </Link>
       </h1>
+      <h3
+        className=''
+        style={{
+            paddingTop: '20px'
+        }}
+      >
+        <Link
+          className='navLink'
+          to="/about"
+          style={{
+            paddingLeft: '20px',
+            float: 'right',
+            color: 'white',
+            textDecoration: 'none',
+          }}
+        >
+          About
+        </Link>
+        <Link
+          className='navLink'
+          to="/resume"
+          style={{
+            paddingLeft: '20px',
+            float: 'right',
+            color: 'white',
+            textDecoration: 'none',
+          }}
+        >
+          Resume
+        </Link>
+      </h3>
     </div>
   </div>
 )
@@ -37,10 +71,10 @@ const Header = () => (
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="Gatsby Default Starter"
+      title="Finbar Maunsell"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: 'Personal website' },
+        { name: 'keywords', content: 'personal, website, blog' },
       ]}
     />
     <Header />
@@ -49,7 +83,7 @@ const TemplateWrapper = ({ children }) => (
         margin: '0 auto',
         maxWidth: 960,
         padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
+        paddingTop: '20px',
       }}
     >
       {children()}
