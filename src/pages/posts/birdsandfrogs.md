@@ -1,10 +1,11 @@
 ---
-path: "/birdsandfrogs"
+path: "/birdsandfrogs/"
 date: "2017-09-26"
 title: "A comparison of two bioacoustics papers and their relevance to Cacophony."
+image: './posts/classifier_test.png'
 ---
 
-The Cacophony Project (https://cacophony.org.nz/) is based around using technology to help improve pest control and bird conservation in New Zealand. One of their main focuses is on collecting and analysing birdsong data. The idea is that if we had up to date data on the levels of birdsong in conservation areas then we can track how they are doing and also how pest control efforts are going. To help with this Cacophony is building birdsong monitors that are far cheaper, more durable and easier to use than the current ones. (I worked on these during the Summer of 2016 and they’re pretty wicked - essentially a smart phone in a tree).
+The [Cacophony Project](https://cacophony.org.nz/) is based around using technology to help improve pest control and bird conservation in New Zealand. One of their main focuses is on collecting and analysing birdsong data. The idea is that if we had up to date data on the levels of birdsong in conservation areas then we can track how they are doing and also how pest control efforts are going. To help with this Cacophony is building birdsong monitors that are far cheaper, more durable and easier to use than the current ones. (I worked on these during the Summer of 2016 and they’re pretty wicked - essentially a smart phone in a tree).
 
 My position on the Cacophony team is in the early stages of birdsong analysis. Lately there has been a lot of research going on in the area which is awesome as it helps me to work out what will/won’t work.
 Ideally the birdsong analysis process will follow these steps:
@@ -20,8 +21,8 @@ Birds.
 
 -----------------
 
-Using multi-label classification for acoustic pattern detection and
-assisting bird species surveys
+Using multi-label classification for acoustic pattern detection and assisting bird species surveys.
+
 Authors/contributors: Liang Zhang, Michael Towsey, Jie Xie, Jinglan Zhang, Paul Roe
 
 -----------------
@@ -33,29 +34,17 @@ The indices/features were picked to ensure high classification accuracy. A balan
 The classifier, multi-layer perceptron, was picked from three (decision tree, K Nearest Neighbour(kNN), multi-layer perceptron) as being the most accurate according to the evaluation metrics. Their parameters were optimised using grid-search.
 Evaluations of the  classifications were made using Hamming Loss, Accuracy and Exact Match. The results for all three classifiers are shown below:
 
-Hamming loss
-Accuracy
-Exact match
 
-ML-kNN
-0.099 ± 0.008
-0.827 ± 0.014
-0.622 ± 0.030
+|                         | Hamming Loss  | Accuracy      | Exact Match   |   |
+|-------------------------|---------------|---------------|---------------|---|
+| ML-kNN                  | 0.099 ± 0.008 | 0.827 ± 0.014 | 0.622 ± 0.030 |   |
+| ML-DecisionTree         | 0.090 ± 0.010 | 0.833 ± 0.020 | 0.661 ± 0.028 |   |
+| ML-MultilayerPerceptron | 0.079 ± 0.007 | 0.853 ± 0.014 | 0.696 ± 0.039 |   |
 
 
-ML-DecisionTree
-0.090 ± 0.010
-0.833 ± 0.020
-0.661 ± 0.028
+![graph of results for bird species recognition](/classifier_test.png)
 
-
-ML-MultilayerPerceptron
-0.079 ± 0.007
-0.853 ± 0.014
-0.696 ± 0.039
-
-
-The recordings that were labelled for bird activity by the classifier were then further analysed using multi-label classification (classifier=multi-layer perceptron). A test was designed for 5 different methods of bird species recognition. Based on data already gathered and labelled for all the different bird species present, the test was designed to observe the time efficiency for each classification method to label all the bird species present in 125mins of audio. The classification methods were: the theoretical best(all bird species are labelled as soon as they could have possibly been recognised), the multi-layer perceptron multi-label classifier, a single-label classifier, the Dawn Sampling Method* and randomly selecting minutes without any process (green). I think the findings are quite interesting.
+The recordings that were labelled for bird activity by the classifier were then further analysed using multi-label classification (classifier=multi-layer perceptron). A test was designed for 5 different methods of bird species recognition. Based on data already gathered and labelled for all the different bird species present, the test was designed to observe the time efficiency for each classification method to label all the bird species present in 125mins of audio. The classification methods were: the theoretical best(all bird species are labelled as soon as they could have possibly been recognised), the multi-layer perceptron multi-label classifier, a single-label classifier, the Dawn Sampling Method[^1] and randomly selecting minutes without any process (green). I think the findings are quite interesting.
 The Dawn Sampling method was the most effective for the first 75 minutes and then was taken over by the single and multi label classifiers. The Single label classifier was the better on average between itself and the multilabel one (see later for a further analysis of this). The single/multi label classifiers are better from the start than the random selection method. In fact at the 25minute mark the automated classifiers had labelled as many species as the random method had at 37mins. This is significant as it implies that using automated classification saves time whilst being able to recognise more species - about 12.5% less species were recorded by the random method after listening to the full 125minutes of samples.
 It is amazing to think that the multi/single label classifiers were just as good as the dawn sampling method at the 75minute mark. The Dawn sampling method is also susceptible to two problems: weather conditions(rain can interrupt the dawn chorus) and some birds don’t appear in the morning. Therefore the automated classification methods provide comparable efficiency but also a more resilient method.
 
@@ -70,8 +59,8 @@ Frogs:
 
 -----------------
 
-An intelligent system for estimating frog community calling activity and
-species richness
+An intelligent system for estimating frog community calling activity and species richness.
+
 Authors/contributors: Jie Xiea,b, Michael Towseya, Mingying Zhuc, Jinglan Zhanga, Paul Roea
 
 -----------------
@@ -83,34 +72,13 @@ Next up is labelling the data for all the different species of frog (the same me
 Classifier parameter optimisation was done using grid-search.
 The accuracy of the classifiers was evaluated using a mix of three metrics: Hamming loss, accuracy and subset accuracy. The results are supplied below:
 
-T(testing(s))
-T(training(s))
-Hamming Loss
-Accuracy
-Subset Accuracy
 
-ML-Decision Tree n
-0.222 ± 0.026
-0.006 ± 0.008
-0.154 ± 0.006
-0.597 ± 0.019
-0.260 ± 0.029
+|                         | T(testing(s))   | T(training(s)) | Hamming Loss  | Accuracy      | Subset Accuracy |
+|-------------------------|-----------------|----------------|---------------|---------------|-----------------|
+| ML-RandomForest         | 0.877 ± 0.030   | 0.019 ± 0.007  | 0.100 ± 0.009 | 0.720 ± 0.028 | 0.453 ± 0.029   |
+| ML-DecisionTree         | 0.222 ± 0.026   | 0.006 ± 0.008  | 0.154 ± 0.006 | 0.597 ± 0.019 | 0.260 ± 0.029   |
+| ML-MultilayerPerceptron | 243.372 ± 1.918 | 0.072 ± 0.006  | 0.112 ± 0.014 | 0.698 ± 0.028 | 0.418 ± 0.075   |
 
-
-ML-MultilayerPerceptron
-243.372 ± 1.918
-0.072 ± 0.006
-0.112 ± 0.014
-0.698 ± 0.028
-0.418 ± 0.075
-
-
-ML-RandomForest
-0.877 ± 0.030
-0.019 ± 0.007
-0.100 ± 0.009
-0.720 ± 0.028
-0.453 ± 0.029
 
 In the above, T(training and testing) are measurements of the time in seconds the algorithms take. A lower value of Hamming Loss implies better classification performance but higher values of Accuracy/Subset imply better classification performance.
 
@@ -127,6 +95,6 @@ Overall my major points of interest (coming from a Cacophony perspective) when t
 -Although the authors were similar for both papers, they both use the same technique for classifying bird/frog species ( binary relevance based multi-label learning) albeit with a different classifier (multi-layer perceptron vs random forest).
 -The features used in the multi-label classifiers for recognising bird/frog species are all different. The choice of these features will have to be researched as there must be a reason why the same authors used different features for a very similar problem. Could this be linked to frogs vs birds or something else?
 
-If you’ve read all this then well done. This is my interpretation of the two papers after a night looking at them so I could have missed important points. But, please feel free to get into contact with me about anything I’ve said in this post.
+If you’ve read all this then well done. This is my interpretation of the two papers after a night looking at them so I could have missed important points. But, please feel free to get into [contact with me](mailto:finbarmaunsell.com) about anything I’ve said in this post.
 
-*The Dawn Sampling method (listening to birds in the morning for 3 hours)  is widely considered the most effective manual method of bird species recognition.
+[^1]:The Dawn Sampling method (listening to birds in the morning for 3 hours)  is widely considered the most effective manual method of bird species recognition.

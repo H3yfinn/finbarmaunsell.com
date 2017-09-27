@@ -1,5 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import Footer from '../pages/components/footer.js'
 
 // import '../css/blog-post.css'; // make it pretty!
 
@@ -19,6 +20,7 @@ export default function Template({
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
       </div>
+      <Footer />
     </div>
   );
 }
