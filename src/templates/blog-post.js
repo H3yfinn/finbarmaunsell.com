@@ -22,6 +22,7 @@ export default function Template({
       </div>
       <Footer />
       <img src={classifier_img) />
+      <p> using github for development.. danger!</p>
     </div>
   );
 }
