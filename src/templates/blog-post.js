@@ -22,7 +22,7 @@ export default function Template({
       </div>
       <Footer />
       <div>
-        <img src={classifier_img) />
+        <img src={classifier_img} />
         <p> using github for development.. danger!</p>
       </div>
     </div>
