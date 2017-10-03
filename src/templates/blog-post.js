@@ -4,8 +4,6 @@ import Footer from '../pages/components/footer.js';
 import classifier_img from '../pages/classifier_test.png';
 // import '../css/blog-post.css'; // make it pretty!
 
-console.log(classifier_img);
-
 export default function Template({
   data // this prop will be injected by the GraphQL query we'll write in a bit
 }) {
