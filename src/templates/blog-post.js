@@ -8,6 +8,7 @@ export default function Template({
   data // this prop will be injected by the GraphQL query we'll write in a bit
 }) {
   const { markdownRemark: post } = data; // data.markdownRemark holds our post data
+  console.log(classifier_img);
   return (
     <div className="blog-post-container">
       <Helmet title={`${post.frontmatter.title}`} />
