@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import Footer from '../pages/components/footer.js'
-import classifier_img from '../pages/classifier_test.png'
+import Footer from '../pages/components/footer.js';
+import classifier_img from '../pages/classifier_test.png';
 // import '../css/blog-post.css'; // make it pretty!
 
 export default function Template({
