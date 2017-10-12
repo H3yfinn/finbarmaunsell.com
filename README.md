@@ -11,3 +11,5 @@ To do:
 -A cool not-as-generic Footer
 
 -get a favicon
+
+-On some mobile's the resume page looks pretty ugly. This doesn't actually show from dev tools so need access to the right size mobile (Iphone5 and a bigger one, seemed like the latest Iphone[42?]). Potentially the page will need to be quite different in mobile view.  
