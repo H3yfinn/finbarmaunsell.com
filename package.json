@@ -4,19 +4,21 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.6",
-    "gatsby": "^1.9.42",
-    "gatsby-cli": "^1.1.6",
+    "bootstrap": "^4.0.0-beta.3",
+    "gatsby": "^1.9.149",
+    "gatsby-cli": "^1.1.28",
     "gatsby-link": "^1.6.15",
-    "gatsby-plugin-catch-links": "^1.0.8",
+    "gatsby-plugin-catch-links": "^1.0.14",
     "gatsby-plugin-react-helmet": "^1.0.5",
-    "gatsby-plugin-typography": "^1.7.9",
-    "gatsby-source-filesystem": "^1.5.1",
-    "gatsby-transformer-remark": "^1.7.11",
+    "gatsby-plugin-typography": "^1.7.10",
+    "gatsby-source-filesystem": "^1.5.11",
+    "gatsby-transformer-remark": "^1.7.26",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-transition-group": "^2.2.0",
-    "reactstrap": "^4.8.0"
+    "react-redux": "^5.0.6",
+    "react-transition-group": "^2.2.1",
+    "reactstrap": "^4.8.0",
+    "redux-thunk": "^2.2.0"
   },
   "keywords": [
     "gatsby"

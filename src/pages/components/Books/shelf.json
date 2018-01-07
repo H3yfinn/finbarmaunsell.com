@@ -1,0 +1,84 @@
+{
+  "shelf": [
+    {
+      "title": "Meditations",
+      "author": "Marcus Aurelius",
+      "wiki": "https://en.wikipedia.org/wiki/Meditations",
+      "start": "1.12.2017",
+      "progress": 1.0,
+      "end": "25.12.2017"
+    },
+    {
+      "title": "The Death of Ivan Ilyich",
+      "author": "Leo Tolstoy",
+      "wiki": "https://en.wikipedia.org/wiki/The_Death_of_Ivan_Ilyich",
+      "start": "1.12.2017",
+      "progress": 1.0,
+      "end": "25.12.2017"
+    },
+    {
+      "title": "Guards! Guards!",
+      "author": "Terry Pratchett",
+      "wiki": "https://en.wikipedia.org/wiki/Guards!_Guards!",
+      "start": "1.1.2017",
+      "progress": 1.0,
+      "end": "25.1.2017"
+    },
+    {
+      "title": "Goethe: Selected Poems",
+      "author": "Johann Wolfgang von Goethe",
+      "wiki": "http://www.poetryintranslation.com/PITBR/German/Goethepoems.php",      "start": "1.1.2017",
+      "progress": 1.0,
+      "end":"2.1.2017"
+    },    
+    {
+      "title": "Man's Search for Meaning",
+      "author": "Victor Frankl",
+      "wiki": "https://en.wikipedia.org/wiki/Man%27s_Search_for_Meaning",
+      "start": "1.1.2017",
+      "progress": 1.0,
+      "end":"2.1.2017"
+    },
+    {
+      "title": "Letters from a Stoic",
+      "author": "Seneca",
+      "wiki": "https://en.wikipedia.org/wiki/Epistulae_Morales_ad_Lucilium",
+      "start": "1.1.2017",
+      "progress": 1.0,
+      "end":"2.1.2017"
+    },
+    {
+      "title": "Sourcery",
+      "author": "Terry Pratchett",
+      "wiki": "https://en.wikipedia.org/wiki/Sourcery",
+      "start": "1.1.2017",
+      "progress": 1.0,
+      "end":"2.1.2017"
+    },
+    {
+      "title":  "Superintelligence: Paths, Dangers, Strategies",
+      "author": "Nick Bostrom",
+      "wiki": "https://en.wikipedia.org/wiki/Superintelligence:_Paths,_Dangers,_Strategies"
+     },
+        {
+      "title":  "Homo Deus",
+      "author": "Yuval Noah Harari",
+      "wiki": "https://en.wikipedia.org/wiki/Homo_Deus:_A_Brief_History_of_Tomorrow"
+     },
+             {
+      "title":  "Sapiens: A Brief History of Humankind",
+      "author": "Yuval Noah Harari",
+      "wiki": "https://en.wikipedia.org/wiki/Sapiens:_A_Brief_History_of_Humankind"
+     },
+                          {
+      "title":  "The Autobiography of Benjamin Franklin",
+      "author": "Benjamin Franklin",
+      "wiki": "https://en.wikipedia.org/wiki/The_Autobiography_of_Benjamin_Franklin"
+     },
+     {
+      "title":  "The Consolation of Philosophy",
+      "author": "Boethius",
+      "wiki": "https://en.wikipedia.org/wiki/The_Consolation_of_Philosophy"
+     }
+  ]
+}

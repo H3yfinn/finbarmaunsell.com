@@ -63,6 +63,18 @@ const Header = () => (
         >
           Resume
         </Link>
+        <Link
+          className='navLink'
+          to="/books"
+          style={{
+            paddingLeft: '20px',
+            float: 'right',
+            color: 'white',
+            textDecoration: 'none',
+          }}
+        >
+          Bookshelf
+        </Link>
       </h3>
     </div>
   </div>
